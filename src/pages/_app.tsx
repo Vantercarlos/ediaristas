@@ -2,6 +2,8 @@ import 'ui/styles/globals.css'
 import theme from 'ui/themes/theme';
 import { ThemeProvider } from '@material-ui/core';
 import Head from 'next/head';
+import React from 'react';
+import Header from 'ui/components/surfaces/Header/Header';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -19,6 +21,7 @@ function MyApp({ Component, pageProps }) {
                 />
       </Head>
       <ThemeProvider theme={theme}>
+          <Header />
           <Component {...pageProps} />
       </ThemeProvider>
     </>
